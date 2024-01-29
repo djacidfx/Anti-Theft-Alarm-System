@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bgcolor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:background="@color/purple_500"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:text="Android AntiTheft System"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/_16sdp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/settings"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/settings"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_120sdp"
+                    android:layout_marginLeft="@dimen/_2sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_2sdp"
+                    android:weightSum="3">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_115sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_weight="1.3"
+                        app:cardCornerRadius="@dimen/_10sdp"
+                        app:cardElevation="@dimen/_3sdp">
+
+                        <RelativeLayout
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:id="@+id/motionBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageButton
+                                android:id="@+id/motionimg"
+                                android:background="@drawable/motion_detection_alarm"
+                                android:clickable="false"
+                                android:layout_width="@dimen/_45sdp"
+                                android:layout_height="@dimen/_45sdp"
+                                android:layout_centerHorizontal="true" />
+
+                            <TextView
+                                android:textSize="@dimen/_11sdp"
+                                android:textStyle="bold"
+                                android:textColor="@color/textColorDark"
+                                android:gravity="center"
+                                android:id="@+id/motiontxt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:text="Motion Detection"
+                                android:layout_below="@+id/motionimg"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/maintxtfont" />
+
+                            <TextView
+                                android:textSize="@dimen/_10sdp"
+                                android:textStyle="normal"
+                                android:textColor="@color/textColorLight"
+                                android:paddingLeft="@dimen/_5sdp"
+                                android:paddingRight="@dimen/_5sdp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:text="Detect When Your Phone Is Moved"
+                                android:layout_below="@+id/motiontxt"
+                                android:fontFamily="@font/smaltxtfont"
+                                android:textAlignment="center" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_115sdp"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_weight="1.3"
+                        app:cardCornerRadius="@dimen/_10sdp"
+                        app:cardElevation="@dimen/_3sdp">
+
+                        <RelativeLayout
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:id="@+id/pocketBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageButton
+                                android:id="@+id/pocketimg"
+                                android:background="@drawable/anti_pocket_detection"
+                                android:clickable="false"
+                                android:layout_width="@dimen/_45sdp"
+                                android:layout_height="@dimen/_45sdp"
+                                android:layout_centerHorizontal="true" />
+
+                            <TextView
+                                android:id="@+id/pockettxt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/pocketimg"
+                                android:layout_centerInParent="true"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:fontFamily="@font/maintxtfont"
+                                android:gravity="center"
+                                android:text="Pick Pocket"
+                                android:textColor="@color/textColorDark"
+                                android:textSize="@dimen/_11sdp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:textSize="@dimen/_10sdp"
+                                android:textStyle="normal"
+                                android:textColor="@color/textColorLight"
+                                android:paddingLeft="@dimen/_5sdp"
+                                android:paddingRight="@dimen/_5sdp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:text="Detect When remove from pocket"
+                                android:layout_below="@+id/pockettxt"
+                                android:fontFamily="@font/smaltxtfont"
+                                android:textAlignment="center" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_120sdp"
+                    android:layout_marginLeft="@dimen/_2sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_2sdp"
+                    android:weightSum="3">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_115sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_weight="1.3"
+                        app:cardCornerRadius="@dimen/_10sdp"
+                        app:cardElevation="@dimen/_3sdp">
+
+                        <RelativeLayout
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:id="@+id/chargingBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageButton
+                                android:id="@+id/chargingimg"
+                                android:background="@drawable/charging_detection"
+                                android:clickable="false"
+                                android:layout_width="@dimen/_45sdp"
+                                android:layout_height="@dimen/_45sdp"
+                                android:layout_centerHorizontal="true" />
+
+                            <TextView
+                                android:textSize="@dimen/_11sdp"
+                                android:textStyle="bold"
+                                android:textColor="@color/textColorDark"
+                                android:gravity="center"
+                                android:id="@+id/chargingtxt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:text="Charging Detection"
+                                android:layout_below="@+id/chargingimg"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/maintxtfont" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/chargingtxt"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:fontFamily="@font/smaltxtfont"
+                                android:paddingLeft="@dimen/_5sdp"
+                                android:paddingRight="@dimen/_5sdp"
+                                android:text="Detect When charger is unplugged"
+                                android:textAlignment="center"
+                                android:textColor="@color/textColorLight"
+                                android:textSize="@dimen/_10sdp"
+                                android:textStyle="normal" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_115sdp"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_weight="1.3"
+                        app:cardCornerRadius="@dimen/_10sdp"
+                        app:cardElevation="@dimen/_3sdp">
+
+                        <RelativeLayout
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:id="@+id/earphoneBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageButton
+                                android:id="@+id/earphoneimg"
+                                android:background="@drawable/earphones_detection"
+                                android:clickable="false"
+                                android:layout_width="@dimen/_45sdp"
+                                android:layout_height="@dimen/_45sdp"
+                                android:layout_centerHorizontal="true" />
+
+                            <TextView
+                                android:textSize="@dimen/_11sdp"
+                                android:textStyle="bold"
+                                android:textColor="@color/textColorDark"
+                                android:gravity="center"
+                                android:id="@+id/earphonetxt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:text="Earphone Detection"
+                                android:layout_below="@+id/earphoneimg"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/maintxtfont" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/earphonetxt"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:fontFamily="@font/smaltxtfont"
+                                android:paddingLeft="@dimen/_5sdp"
+                                android:paddingRight="@dimen/_5sdp"
+                                android:text="Detect When removed from pocket"
+                                android:textAlignment="center"
+                                android:textColor="@color/textColorLight"
+                                android:textSize="@dimen/_10sdp"
+                                android:textStyle="normal" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/adcard"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_200sdp"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    app:cardElevation="@dimen/_3sdp">
+
+                    <FrameLayout
+                        android:orientation="vertical"
+                        android:id="@+id/fl_adplaceholderMain"
+                        android:visibility="visible"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_200sdp" />
+
+                    <TextView
+                        android:id="@+id/txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Ads Display Here"
+                        android:textSize="@dimen/_15sdp"
+                        android:textStyle="italic" />
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_120sdp"
+                    android:layout_marginLeft="@dimen/_2sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_2sdp"
+                    android:weightSum="3">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_115sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_weight="1.3"
+                        app:cardCornerRadius="@dimen/_10sdp"
+                        app:cardElevation="@dimen/_3sdp">
+
+                        <RelativeLayout
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:id="@+id/wifiBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageButton
+                                android:id="@+id/wifiimg"
+                                android:background="@drawable/intruder_alert"
+                                android:clickable="false"
+                                android:layout_width="@dimen/_45sdp"
+                                android:layout_height="@dimen/_45sdp"
+                                android:layout_centerHorizontal="true" />
+
+                            <TextView
+                                android:textSize="@dimen/_11sdp"
+                                android:textStyle="bold"
+                                android:textColor="@color/textColorDark"
+                                android:gravity="center"
+                                android:id="@+id/wifitxt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:text="Intruder Alert"
+                                android:layout_below="@+id/wifiimg"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/maintxtfont" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/wifitxt"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:fontFamily="@font/smaltxtfont"
+                                android:paddingLeft="@dimen/_5sdp"
+                                android:paddingRight="@dimen/_5sdp"
+                                android:text="Takes selfie in case of wrong password"
+                                android:textAlignment="center"
+                                android:textColor="@color/textColorLight"
+                                android:textSize="@dimen/_10sdp"
+                                android:textStyle="normal" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_115sdp"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_weight="1.3"
+                        app:cardCornerRadius="@dimen/_10sdp"
+                        app:cardElevation="@dimen/_3sdp">
+
+                        <RelativeLayout
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:id="@+id/fullbatryBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageButton
+                                android:id="@+id/fullbatryimg"
+                                android:background="@drawable/fullybattery_detection"
+                                android:clickable="false"
+                                android:layout_width="@dimen/_45sdp"
+                                android:layout_height="@dimen/_45sdp"
+                                android:layout_centerHorizontal="true" />
+
+                            <TextView
+                                android:textSize="@dimen/_11sdp"
+                                android:textStyle="bold"
+                                android:textColor="@color/textColorDark"
+                                android:gravity="center"
+                                android:id="@+id/fullbatrytxt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:text="Full Battery Detection"
+                                android:layout_below="@+id/fullbatryimg"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/maintxtfont" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/fullbatrytxt"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:fontFamily="@font/smaltxtfont"
+                                android:paddingLeft="@dimen/_5sdp"
+                                android:paddingRight="@dimen/_5sdp"
+                                android:text="Detect When Battry is Full charged"
+                                android:textAlignment="center"
+                                android:textColor="@color/textColorLight"
+                                android:textSize="@dimen/_10sdp"
+                                android:textStyle="normal" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_120sdp"
+                    android:layout_marginLeft="@dimen/_2sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_2sdp"
+                    android:weightSum="3">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_115sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_weight="1.3"
+                        app:cardCornerRadius="@dimen/_10sdp"
+                        app:cardElevation="@dimen/_3sdp">
+
+                        <RelativeLayout
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:id="@+id/moreappsBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageButton
+                                android:id="@+id/moreappsimg"
+                                android:background="@drawable/more_apps"
+                                android:clickable="false"
+                                android:layout_width="@dimen/_45sdp"
+                                android:layout_height="@dimen/_45sdp"
+                                android:layout_centerHorizontal="true" />
+
+                            <TextView
+                                android:textSize="@dimen/_11sdp"
+                                android:textStyle="bold"
+                                android:textColor="@color/textColorDark"
+                                android:gravity="center"
+                                android:id="@+id/moreappstxt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:text="More Apps"
+                                android:layout_below="@+id/moreappsimg"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/maintxtfont" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/moreappstxt"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:fontFamily="@font/smaltxtfont"
+                                android:paddingLeft="@dimen/_5sdp"
+                                android:paddingRight="@dimen/_5sdp"
+                                android:text="Check out our apps"
+                                android:textAlignment="center"
+                                android:textColor="@color/textColorLight"
+                                android:textSize="@dimen/_10sdp"
+                                android:textStyle="normal" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_115sdp"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_weight="1.3"
+                        app:cardCornerRadius="@dimen/_10sdp"
+                        app:cardElevation="@dimen/_3sdp">
+
+                        <RelativeLayout
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:id="@+id/rateusBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageButton
+                                android:id="@+id/rateusimg"
+                                android:background="@drawable/rate_us"
+                                android:clickable="false"
+                                android:layout_width="@dimen/_45sdp"
+                                android:layout_height="@dimen/_45sdp"
+                                android:layout_centerHorizontal="true" />
+
+                            <TextView
+                                android:textSize="@dimen/_11sdp"
+                                android:textStyle="bold"
+                                android:textColor="@color/textColorDark"
+                                android:gravity="center"
+                                android:id="@+id/rateustxt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:text="Rate Us"
+                                android:layout_below="@+id/rateusimg"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/maintxtfont" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/rateustxt"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:fontFamily="@font/smaltxtfont"
+                                android:paddingLeft="@dimen/_5sdp"
+                                android:paddingRight="@dimen/_5sdp"
+                                android:text="If you enjoy this app please, rate it!"
+                                android:textAlignment="center"
+                                android:textColor="@color/textColorLight"
+                                android:textSize="@dimen/_10sdp"
+                                android:textStyle="normal" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

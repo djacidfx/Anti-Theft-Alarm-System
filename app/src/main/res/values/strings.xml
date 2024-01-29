@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_id">ca-app-pub-2916714021613915~1222254159</string>
+    <string name="app_name">Android AntiTheft</string>
+    <string name="app_open">ca-app-pub-2916714021613915/3860079686</string>
+    <string name="banner">ca-app-pub-2916714021613915/7027763532</string>
+    <string name="interstitial">ca-app-pub-2916714021613915/3185292262</string>
+    <string name="native_advanced">ca-app-pub-2916714021613915/3369125093</string>
+    <string name="camera">camera</string>
+    <string name="change_pin_des">Set your pin new code for Security</string>
+    <string name="change_time_des">Set your service activation time</string>
+    <string name="error_cannot_get_permission">Camera permission not available.</string>
+    <string name="error_cannot_open">Cannot open camera.</string>
+    <string name="error_cannot_write">Cannot write image captured by camera.</string>
+    <string name="error_not_having_camera">Your device does not have front camera.</string>
+    <string name="pinlock_secondPin">Enter Pin Code Again</string>
+    <string name="pinlock_settitle">Set Pin Code</string>
+    <string name="pinlock_title">Enter Pin Code</string>
+    <string name="pinlock_tryagain">Pin Codes Are Not The Same</string>
+    <string name="pinlock_wrongpin">Wrong Pin code</string>
+</resources>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@color/bgcolor" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:paddingBottom="30dp" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1">
+        <ScrollView android:orientation="vertical" android:padding="@dimen/_5sdp" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <LinearLayout android:orientation="vertical" android:padding="@dimen/_10sdp" android:layout_width="match_parent" android:layout_height="match_parent">
+                <androidx.cardview.widget.CardView android:layout_gravity="center_vertical" android:layout_width="match_parent" android:layout_height="@dimen/_60sdp" app:cardBackgroundColor="@color/white" app:cardCornerRadius="@dimen/_5sdp" app:cardElevation="@dimen/_3sdp">
+                    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@+id/selectTone_linearLayout" android:layout_width="match_parent" android:layout_height="match_parent">
+                        <RelativeLayout android:background="@color/white" android:layout_width="@dimen/_60sdp" android:layout_height="match_parent">
+                            <ImageView android:background="@drawable/change_tone" android:padding="8dp" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginLeft="10dp" android:layout_centerInParent="true"/>
+                        </RelativeLayout>
+                        <RelativeLayout android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+                            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="@dimen/_10sdp" android:layout_marginTop="5dp" android:layout_marginBottom="5dp" android:layout_centerHorizontal="true">
+                                <TextView android:textSize="14sp" android:textColor="@color/purple_700"
+                                    android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Change tone" android:layout_centerInParent="true" android:textAllCaps="true"/>
+                                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Customize your alert tone here"/>
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView android:layout_gravity="center_vertical" android:layout_width="match_parent" android:layout_height="@dimen/_60sdp" android:layout_marginTop="@dimen/_10sdp" app:cardBackgroundColor="@color/white" app:cardCornerRadius="@dimen/_5sdp" app:cardElevation="@dimen/_3sdp">
+                    <LinearLayout android:orientation="horizontal" android:id="@+id/change_time" android:layout_width="match_parent" android:layout_height="match_parent">
+                        <RelativeLayout android:background="@color/white" android:layout_width="@dimen/_60sdp" android:layout_height="match_parent">
+                            <ImageView android:background="@drawable/change_time" android:padding="8dp" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginLeft="10dp" android:layout_centerInParent="true" android:layout_centerVertical="true"/>
+                        </RelativeLayout>
+                        <RelativeLayout android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+                            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="@dimen/_10sdp" android:layout_marginTop="5dp" android:layout_marginBottom="5dp" android:layout_centerHorizontal="true">
+                                <TextView android:textSize="14sp" android:textColor="@color/purple_700" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Change Grace Time" android:layout_centerInParent="true" android:textAllCaps="true"/>
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/change_time_des"/>
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView android:layout_gravity="center_vertical" android:layout_width="match_parent" android:layout_height="@dimen/_60sdp" android:layout_marginTop="@dimen/_10sdp" app:cardBackgroundColor="@color/white" app:cardCornerRadius="@dimen/_5sdp" app:cardElevation="@dimen/_3sdp">
+                    <LinearLayout android:orientation="horizontal" android:id="@+id/change_pin_linearLayout" android:layout_width="match_parent" android:layout_height="match_parent">
+                        <RelativeLayout android:background="@color/white" android:layout_width="@dimen/_60sdp" android:layout_height="match_parent">
+                            <ImageView android:background="@drawable/change_pin" android:padding="8dp" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginLeft="10dp" android:layout_centerInParent="true"/>
+                        </RelativeLayout>
+                        <RelativeLayout android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+                            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="@dimen/_10sdp" android:layout_marginTop="5dp" android:layout_marginBottom="5dp" android:layout_centerHorizontal="true">
+                                <TextView android:textSize="14sp" android:textColor="@color/purple_700" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Change pin" android:layout_centerInParent="true" android:textAllCaps="true"/>
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/change_pin_des"/>
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <LinearLayout android:id="@+id/seekbar_container" android:visibility="gone" android:layout_width="match_parent" android:layout_height="60dp" android:layout_margin="5dp">
+                    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="20dp" android:layout_marginRight="20dp">
+                        <ImageView android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/enable_pin"/>
+                        <SeekBar android:id="@+id/volume_seekbar" android:layout_width="match_parent" android:layout_height="wrap_content" android:max="20" android:progress="3"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <androidx.cardview.widget.CardView android:layout_gravity="center_vertical" android:layout_width="match_parent" android:layout_height="@dimen/_60sdp" android:layout_marginTop="@dimen/_10sdp" app:cardBackgroundColor="@color/white" app:cardCornerRadius="@dimen/_5sdp" app:cardElevation="@dimen/_3sdp">
+                    <LinearLayout android:orientation="horizontal" android:id="@+id/help" android:layout_width="match_parent" android:layout_height="match_parent">
+                        <RelativeLayout android:background="@color/white" android:layout_width="@dimen/_60sdp" android:layout_height="match_parent">
+                            <ImageView android:background="@drawable/enable_pin" android:padding="8dp" android:layout_width="40dp" android:layout_height="40dp" android:layout_centerInParent="true"/>
+                        </RelativeLayout>
+                        <RelativeLayout android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+                            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal"
+                                android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="@dimen/_5sdp" android:layout_marginTop="5dp" android:layout_marginBottom="@dimen/_5sdp">
+                                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                                    <TextView android:textSize="14sp" android:textColor="@color/purple_700"
+                                        android:focusableInTouchMode="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Enable PIN" android:layout_centerVertical="true"/>
+                                    <Switch android:textColor="@color/white" android:id="@+id/onoff_Switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:layout_alignParentEnd="true"/>
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <RelativeLayout android:id="@+id/Laynative" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_20sdp">
+                    <FrameLayout android:orientation="vertical" android:id="@+id/fl_adplaceholderMain" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                    <include android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/_10sdp" android:layout_marginRight="@dimen/_10sdp" android:layout_marginBottom="@dimen/_10sdp" layout="@layout/shimmer_lay_native"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

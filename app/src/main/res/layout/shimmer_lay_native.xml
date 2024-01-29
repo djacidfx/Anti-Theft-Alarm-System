@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.shimmer.ShimmerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/shimmer_container_Native" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" app:shimmer_auto_start="true" app:shimmer_base_color="#ccc">
+    <RelativeLayout android:gravity="center" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="250dp">
+            <ImageView android:background="@color/purple_200" android:layout_width="@dimen/_50sdp" android:layout_height="match_parent" android:scaleType="centerCrop"/>
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_weight="1">
+                <TextView android:textSize="14sp" android:textColor="@android:color/darker_gray" android:ellipsize="end" android:gravity="center" android:background="@color/ad_Transprantcolor" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="5dp" android:text="Loading Ad" android:lines="1"/>
+            </LinearLayout>
+            <Button android:textSize="12sp" android:textStyle="bold" android:textColor="@android:color/white" android:gravity="center" android:layout_gravity="center" android:background="@color/ad_filtcolor" android:paddingLeft="5dp" android:paddingRight="5dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginTop="5dp" android:layout_marginBottom="5dp"/>
+        </LinearLayout>
+        <TextView android:textSize="12dp" android:textColor="@color/white" android:background="@drawable/ads_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ad" android:height="17dp" android:width="17dp" android:layout_alignParentTop="true" android:layout_alignParentStart="true"/>
+    </RelativeLayout>
+</com.facebook.shimmer.ShimmerFrameLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="pref_time_name">
+        <item>5 seconds</item>
+        <item>10 seconds</item>
+        <item>15 seconds</item>
+    </array>
+    <array name="pref_tone_name">
+        <item>Tone 1</item>
+        <item>Tone 2</item>
+        <item>Tone 3</item>
+        <item>Tone 4</item>
+        <item>Tone 5</item>
+        <item>Tone 6</item>
+        <item>Tone 7</item>
+        <item>Tone 8</item>
+        <item>Tone 9</item>
+    </array>
+</resources>

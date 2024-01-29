@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ad_Transprantcolor">#5755a3d3</color>
+    <color name="ad_filtcolor">#0a9af1</color>
+    <color name="bgcolor">#f2f2f2</color>
+    <color name="black">#ff000000</color>
+    <color name="colorPrimary">@color/layout_background</color>
+    <color name="layout_background">#18191a</color>
+    <color name="purple_200">#ffbb86fc</color>
+    <color name="purple_500">#0464a0</color>
+    <color name="purple_700">#00558e</color>
+    <color name="stockeCard">#5e58595a</color>
+    <color name="teal_200">#ff03dac5</color>
+    <color name="teal_700">#ff018786</color>
+    <color name="textColorDark">#1cabff</color>
+    <color name="textColorLight">#a1a1a1</color>
+    <color name="text_attempts">#bfc0c1</color>
+    <color name="text_title">#dcddde</color>
+    <color name="white">#ffffffff</color>
+    <color name="yellow">#ffc107</color>
+</resources>
